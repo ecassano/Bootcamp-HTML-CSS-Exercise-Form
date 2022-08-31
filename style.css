@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato';
+}
+
+body {
+    background-image: linear-gradient(to bottom ,#dcdde1, #8c7ae6);
+}
+
+form {
+    width: 60%;
+    margin: 50px auto;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 40px 5%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+form>h1 {
+    margin-bottom: 30px;
+    background-color: #8c7ae6;
+    width: max-content;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+}
+
+form>div {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+form>div>span>label {
+    color: #353b48;
+}
+
+form>div>span {
+    margin: 10px 2% 20px 2%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+form>div>span>input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #dcdde1;
+    outline: none;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+form>div>span>input:focus-visible,
+form>div>span>input:active,
+form>div>span>input:focus {
+    border-color: #8c7ae6;
+    transition: 0.3s ease-in;
+}
+
+.span-social {
+    display: flex;
+}
+
+.span-social input {
+    flex: 8;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #dcdde1;
+    outline: none;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.span-social input:focus-visible,
+.span-social input:focus,
+.span-social input:active {
+    border-color: #8c7ae6;
+    transition: 0.3s ease-in;
+}
+
+.span-social button {
+    flex: 2;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #8c7ae6;
+    background-color: #8c7ae6;
+    margin-top: 10px;
+    color: white;
+}
+
+.span-social button i {
+    font-size: 16px;
+}
+
+input[type=submit] {
+    margin-top: 40px;
+    padding: 10px;
+    width: 20%;
+    background-color: #8c7ae6;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #9c88ff;
+}
+
+/*Radio*/
+.label-sexo {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+input[type=radio] {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkbox {
+    background-color: #dcdde1;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.checkbox i {
+    color: white;
+    font-size: 18px;
+    margin-top: 3.5px;
+    opacity: 0;
+}
+
+input[type=radio]:checked~.checkbox>i {
+    opacity: 1;
+}
+
+input[type=radio]:checked~.checkbox {
+    background-color: #8c7ae6;
+}
+
+/*Bio*/
+.label-bio {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+}
+
+input[type=file] {
+    position: absolute;
+    margin: 0;
+    opacity: 0;
+    width: 100%;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.file {
+    background-color: #dcdde1;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    padding: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.file i {
+    margin-right: 2%;
+    cursor: pointer;
+}
+
+input[type=file]:hover~.file {
+    background-color: #8c7ae6;
+    color: white;
+}
+
+/*Responsivo*/
+@media screen and (max-width: 925px) {
+
+    form>div {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    input[type=submit] {
+        width: fit-content;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    h1 {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    form>div>span>label {
+        font-size: 15px;
+    }
+
+    .label-sexo > label{
+        font-size: 14px;
+    }
+
+    .span-social button i {
+        font-size: 14px;
+    }
+}

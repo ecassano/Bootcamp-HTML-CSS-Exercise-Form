@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Exercício 8.2</title>
+</head>
+
+<body>
+
+    <form method="post">
+        <h1><i style="margin-right: 15px;" class="fa-solid fa-user"></i>Editar Perfil</h1>
+        <div>
+            <span>
+                <label for="inNome">Nome Completo:</label>
+                <input type="text" id="inNome">
+            </span>
+            <span>
+                <label for="inEmail">E-mail:</label>
+                <input type="email" id="inEmail">
+            </span>
+        </div>
+
+        <div>
+            <span>
+                <label for="inSenha">Senha:</label>
+                <input type="password" id="inSenha">
+            </span>
+            <span>
+                <label for="inUser">Nome de Usuário:</label>
+                <input type="text" id="inUser">
+            </span>
+        </div>
+
+        <div>
+            <span>
+                <label for="">Sexo:</label>
+                <span style="display: flex;justify-content: flex-start;">
+                    <span style="margin-top: 10px;flex: 1;">
+                        <label class="label-sexo" for="masc">
+                            <input style="border: none;" type="radio" name="sexo" id="masc">
+                            <span class="checkbox"><i class="fa-solid fa-child"></i></span>
+                            <label style="margin-left: 2%;" for="masc">Masculino</label>
+                        </label>
+                    </span>
+                    <span style="margin-top: 10px;flex: 1;">
+                        <label class="label-sexo" for="fem">
+                            <input style="border: none;" type="radio" name="sexo" id="fem">
+                            <span class="checkbox"><i class="fa-solid fa-child-dress"></i></span>
+                            <label style="margin-left: 2%;" for="fem">Feminino</label>
+                        </label>
+                    </span>
+                </span>
+            </span>
+            <span>
+                <label style="margin-bottom: 10px;" for="">Biografia:</label>
+                <label class="label-bio" for="inBio">
+                    <input style="border: none;" type="file" id="inBio">
+                    <span class="file"><i class="fa-solid fa-file-arrow-up"></i>Upload</span>
+                </label>
+            </span>
+        </div>
+
+        <div>
+            <span>
+                <label for="inFace">Perfil do Facebook:</label>
+                <span class="span-social">
+                    <button disabled><i class="fa-brands fa-facebook-f"></i></button><input type="url" id="inFace">
+                </span>
+            </span>
+            <span>
+                <label for="inGit">Perfil do GitHub</label>
+                <span class="span-social">
+                    <button disabled><i class="fa-brands fa-github-alt"></i></button><input type="url" id="inGit">
+                </span>
+            </span>
+        </div>
+
+        <div>
+            <span>
+                <label for="inInsta">Perfil do Instagram:</label>
+                <span class="span-social">
+                    <button disabled><i class="fa-brands fa-instagram"></i></button><input type="url" id="inInsta">
+                </span>
+            </span>
+            <span>
+                <label for="inLink">Perfil do Linkedin:</label>
+                <span class="span-social">
+                   <button disabled><i class="fa-brands fa-linkedin-in"></i></button><input type="url" id="inLink"> 
+                </span>
+                
+            </span>
+        </div>
+
+        <input type="submit" value="Confirmar">
+    </form>
+</body>
+
+</html>
